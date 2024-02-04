@@ -5,29 +5,29 @@ const constraints =
   "1. Just write the Tweet, don't write anything else.\n" +
   "2. Don't exceed 270 characters.\n" +
   "3. Don't use quotation marks.\n" +
-  '4. Use 3 relevant hashtags.\n' +
-  "5. Don't use emojis.";
+  "4. Don't use emojis. \n" +
+  "5. Don't add Hashtags";
 
 const topicPrompts: TopicPromptType[] = [
   {
     topic: 'Backend Engineering',
     userProfession: 'Backend Engineer',
     prompt:
-      'Craft a tweet that includes content related to this topic: Backend Engineering \n' +
+      'Craft a tweet that includes advanced content related to this topic: Backend Engineering \n' +
       constraints,
   },
   {
     topic: 'Database Administration',
     userProfession: 'Database Administrator',
     prompt:
-      'Craft a tweet that includes content related to this topic: Database Administration \n' +
+      'Craft a tweet that includes advanced content related to this topic: Database Administration \n' +
       constraints,
   },
   {
     topic: 'AdonisJs - A NodeJs Framework',
     userProfession: 'Backend Engineer',
     prompt:
-      `Craft a tweet that includes content related to this topic: AdonisJs - A NodeJs Framework \n` +
+      `Craft a tweet that includes advanced content related to this topic: AdonisJs - A NodeJs Framework \n` +
       constraints,
   },
 ];
