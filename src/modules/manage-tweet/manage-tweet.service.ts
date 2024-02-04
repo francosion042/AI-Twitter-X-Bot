@@ -1,6 +1,8 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { Cron, CronExpression } from '@nestjs/schedule';
 import { TwitterApiService } from '../api-integrations/twitterApi.service';
+import topicPrompts from '../../constants/topic-prompts.constant';
+import { getRandomItem } from '../../commons/utils';
 
 @Injectable()
 export class ManageTweetService {
@@ -11,10 +13,14 @@ export class ManageTweetService {
   async createTweet() {
     this.logger.debug('Create Tweet Task Ran .....');
 
-    const tweetResponse = await this.twitterApiService.createTweet({
-      text: 'Hello World',
-    });
+    const topic = getRandomItem(topicPrompts);
 
-    console.log(tweetResponse);
+    console.log(topic);
+
+    // const tweetResponse = await this.twitterApiService.createTweet({
+    //   text: 'Hello World',
+    // });
+    //
+    // console.log(tweetResponse);
   }
 }

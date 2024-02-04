@@ -5,7 +5,7 @@ import { EnvConfigService } from '../envConfig/envConfig.service';
 
 @Injectable()
 export class OpenAiService {
-  private readonly openai;
+  private readonly openai: OpenAI;
 
   constructor(private readonly envConfigService: EnvConfigService) {
     this.openai = new OpenAI({
@@ -17,8 +17,14 @@ export class OpenAiService {
     try {
       // Make a request to the OpenAI API
       const response = await this.openai.chat.completions.create({
-        messages: [{ role: 'user', content: data.prompt }],
-        model: 'gpt-3.5-turbo',
+        messages: [
+          {
+            role: 'system',
+            content: `You're a ${data.userProfession} and this is your twitter(X) profile`,
+          },
+          { role: 'user', content: data.prompt },
+        ],
+        model: this.envConfigService.getString('GPT_MODEL'),
       });
 
       // Extract and return the generated text from the API response
@@ -26,7 +32,7 @@ export class OpenAiService {
     } catch (error) {
       // Handle errors (e.g., log them or throw a custom exception)
       console.error('Error generating response from OpenAI:', error.message);
-      throw new Error('Failed to generate response from OpenAI.');
+      // throw new Error('Failed to generate response from OpenAI.');
     }
   }
 }
