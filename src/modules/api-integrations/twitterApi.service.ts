@@ -6,7 +6,7 @@ import {
   TwitterApi,
   TwitterApiReadWrite,
 } from 'twitter-api-v2';
-import { EnvConfigService } from '../../envConfig/envConfig.service';
+import { EnvConfigService } from '../envConfig/envConfig.service';
 
 @Injectable()
 export class TwitterApiService {
