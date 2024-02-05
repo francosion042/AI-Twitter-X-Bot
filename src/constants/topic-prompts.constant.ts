@@ -12,21 +12,21 @@ const topicPrompts: TopicPromptType[] = [
     topic: 'Backend Engineering',
     userProfession: 'Backend Engineer',
     prompt:
-      'Craft a tweet that includes advanced interesting things like tips, features, etc related to this topic: Backend Engineering \n' +
+      'Craft a tweet that includes advanced interesting things like tips, features, jokes etc related to this topic: Backend Engineering \n' +
       constraints,
   },
   {
     topic: 'Database Administration',
     userProfession: 'Database Administrator',
     prompt:
-      'Craft a tweet that includes advanced interesting things like tips, features, etc related to this topic: Database Administration \n' +
+      'Craft a tweet that includes advanced interesting things like tips, features, jokes etc related to this topic: Database Administration \n' +
       constraints,
   },
   {
     topic: 'SQL',
     userProfession: 'Database Administrator',
     prompt:
-      'Craft a tweet that includes advanced interesting things like tips, features, etc related to this topic: SQL \n' +
+      'Craft a tweet that includes advanced interesting things like tips, features, jokes etc related to this topic: SQL \n' +
       constraints,
   },
   // {

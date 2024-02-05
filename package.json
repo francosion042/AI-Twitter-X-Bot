@@ -1,10 +1,10 @@
 {
   "name": "ai-twitter-x-bot",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "AI-Twitter-X-Bot is a Twitter bot designed to post insightful backend development tips, facts, and jokes to keep developers informed and entertained.",
+  "author": "Anthony Nwobodo",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
