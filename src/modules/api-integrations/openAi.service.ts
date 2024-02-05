@@ -20,7 +20,7 @@ export class OpenAiService {
         messages: [
           {
             role: 'system',
-            content: `You're a ${data.userProfession} with many years of experience`,
+            content: `You're a ${data.userProfession} with many years of experience and this is your twitter profile`,
           },
           { role: 'user', content: data.prompt },
         ],

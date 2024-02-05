@@ -29,13 +29,13 @@ const topicPrompts: TopicPromptType[] = [
       'Craft a tweet that includes advanced interesting things like tips, features, etc related to this topic: SQL \n' +
       constraints,
   },
-  {
-    topic: 'AdonisJs',
-    userProfession: 'NodeJs Backend Engineer',
-    prompt:
-      `Craft a tweet that includes advanced interesting things like tips, features, etc related to this topic: AdonisJs \n` +
-      constraints,
-  },
+  // {
+  //   topic: 'AdonisJs',
+  //   userProfession: 'NodeJs Backend Engineer',
+  //   prompt:
+  //     `Craft a tweet that includes advanced interesting things like tips, features, etc related to this topic: AdonisJs \n` +
+  //     constraints,
+  // },
 ];
 
 export default topicPrompts;

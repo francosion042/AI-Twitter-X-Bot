@@ -27,14 +27,17 @@ export class ManageTweetService {
 
     console.log(tweetContent);
 
-    // await this.mailerService.sendMail('New Tweet Posted By Your Bot', 'new-tweet', {
-    //   topic: topic.topic,
-    // });
+    const tweetResponse = await this.twitterApiService.createTweet({
+      text: tweetContent,
+    });
+    console.log(tweetResponse);
 
-    // const tweetResponse = await this.twitterApiService.createTweet({
-    //   text: 'Hello World',
-    // });
-    //
-    // console.log(tweetResponse);
+    await this.mailerService.sendMail(
+      'New Tweet Posted By Your Bot',
+      'new-tweet',
+      {
+        topic: topic.topic,
+      },
+    );
   }
 }
