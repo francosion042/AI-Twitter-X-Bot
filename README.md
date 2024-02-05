@@ -1,12 +1,13 @@
 # AI-Twitter-X-Bot
 
-AI-Twitter-X-Bot is a Twitter bot designed to post insightful backend development tips, facts, and jokes to keep developers informed and entertained.
+AI-Twitter-X-Bot is a highly adaptable Twitter bot designed to post dynamic content tailored to your preferences. Leveraging advanced OpenAi, 
+it delivers a diverse range of content randomly generated based on the user topics and prompts
 
 ## Features
 
-- Regularly posts backend development tips, facts, and memes.
-- Engages with followers through interactive content.
-- Provides updates on the latest trends and technologies in backend development.
+- Utilizes cutting-edge AI technology to curate content based on user preferences.
+- Fully customizable to post any type of content, from industry insights to humorous anecdotes.
+- Offers the option to set up a mail server for receiving email notifications each time a new tweet is posted.
 
 ## Getting Started
 
