@@ -27,9 +27,9 @@ export class ManageTweetService {
 
     console.log(tweetContent);
 
-    await this.mailerService.sendMail('New Tweet Posted By Bot', 'new-tweet', {
-      topic: topic.topic,
-    });
+    // await this.mailerService.sendMail('New Tweet Posted By Your Bot', 'new-tweet', {
+    //   topic: topic.topic,
+    // });
 
     // const tweetResponse = await this.twitterApiService.createTweet({
     //   text: 'Hello World',

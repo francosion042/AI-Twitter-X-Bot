@@ -1,1 +1,1 @@
-# Personal-Twitter-X-Bot
+# AI-Twitter-X-Bot
