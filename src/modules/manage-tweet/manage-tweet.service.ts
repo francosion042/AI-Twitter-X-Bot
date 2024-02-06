@@ -15,7 +15,7 @@ export class ManageTweetService {
     private readonly mailerService: MailerService,
   ) {}
 
-  @Cron(CronExpression.EVERY_2_HOURS)
+  @Cron(CronExpression.EVERY_30_MINUTES)
   async createTweet() {
     this.logger.debug('Create Tweet Task Ran .....');
 
