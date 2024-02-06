@@ -1,41 +1,29 @@
 import { TopicPromptType } from '../commons/types';
 
-const constraints =
-  'Constraints:\n' +
-  'The content should not exceed 270 characters.\n' +
-  'The content should be very technical.\n' +
-  "Don't enclose the content in quotation marks.\n" +
-  "Don't use emojis. \n";
-
 const topicPrompts: TopicPromptType[] = [
   {
     topic: 'Backend Engineering',
     userProfession: 'Backend Engineer',
     prompt:
-      'Craft a tweet of not more than 270 characters that includes advanced interesting things like tips, features, jokes etc related to this topic: Backend Engineering \n' +
-      constraints,
+      "Craft a short tweet about Backend Engineering. Share a compelling insight, fact, or opinion in less than 250 characters. Don't enclose the content in quotation marks and don't use emojis and hashtags.",
   },
   {
     topic: 'Database Administration',
     userProfession: 'Database Administrator',
     prompt:
-      'Craft a tweet of not more than 270 characters that includes advanced interesting things like tips, features, jokes etc related to this topic: Database Administration \n' +
-      constraints,
+      "Craft a short tweet about Database Administration. Share a compelling insight, fact, or opinion in less than 250 characters. Don't enclose the content in quotation marks and don't use emojis and hashtags.",
   },
   {
     topic: 'SQL',
     userProfession: 'Database Administrator',
     prompt:
-      'Craft a tweet of not more than 270 characters that includes advanced interesting things like tips, features, jokes etc related to this topic: SQL \n' +
-      constraints,
+      "Craft a short tweet about SQL. Share a compelling insight, fact, or opinion in less than 250 characters. Don't enclose the content in quotation marks and don't use emojis and hashtags.",
   },
-  // {
-  //   topic: 'AdonisJs',
-  //   userProfession: 'NodeJs Backend Engineer',
-  //   prompt:
-  //     `Craft a tweet that includes advanced interesting things like tips, features, etc related to this topic: AdonisJs \n` +
-  //     constraints,
-  // },
+  {
+    topic: 'API Security',
+    userProfession: 'NodeJs Backend Engineer',
+    prompt: `Craft a short tweet about API Security. Share a compelling insight, fact, or opinion in less than 250 characters. Don't enclose the content in quotation marks and don't use emojis and hashtags.`,
+  },
 ];
 
 export default topicPrompts;

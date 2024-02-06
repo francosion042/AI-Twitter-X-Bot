@@ -18,7 +18,7 @@ To get started with AI-Twitter-X-Bot, follow these steps:
 1. Clone this repository to your local machine.
 2. Install the necessary dependencies using npm or yarn.
 3. Set up your Twitter developer account and obtain API keys.
-4. Configure the bot with your Twitter API keys and other settings.
+4. Configure the bot with your Twitter API keys and other credentials by creating a `.env` file and fill up with variables from `.env.example`.
 5. Modify the prompts in the `topicPrompts` array to customize the content posted by the bot.
 6. Run the bot application and start posting content!
 

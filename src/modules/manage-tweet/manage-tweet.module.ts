@@ -3,9 +3,10 @@ import { ManageTweetService } from './manage-tweet.service';
 import { ManageTweetController } from './manage-tweet.controller';
 import { ApiIntegrationsModule } from '../api-integrations/api-integrations.module';
 import { MailerModule } from '../mailer/mailer.module';
+import { EnvConfigModule } from '../envConfig/envConfig.module';
 
 @Module({
-  imports: [ApiIntegrationsModule, MailerModule],
+  imports: [ApiIntegrationsModule, MailerModule, EnvConfigModule],
   controllers: [ManageTweetController],
   providers: [ManageTweetService],
 })

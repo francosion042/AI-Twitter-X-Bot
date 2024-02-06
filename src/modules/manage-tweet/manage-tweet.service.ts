@@ -5,6 +5,7 @@ import topicPrompts from '../../constants/topic-prompts.constant';
 import { getRandomItem } from '../../commons/utils';
 import { OpenAiService } from '../api-integrations/openAi.service';
 import { MailerService } from '../mailer/mailer.service';
+import { EnvConfigService } from '../envConfig/envConfig.service';
 
 @Injectable()
 export class ManageTweetService {
@@ -13,22 +14,30 @@ export class ManageTweetService {
     private readonly twitterApiService: TwitterApiService,
     private readonly openAiService: OpenAiService,
     private readonly mailerService: MailerService,
+    private readonly envConfigService: EnvConfigService,
   ) {}
 
-  @Cron(CronExpression.EVERY_30_MINUTES)
+  @Cron(CronExpression.EVERY_HOUR)
   async createTweet() {
     this.logger.debug('Create Tweet Task Ran .....');
 
     const topic = getRandomItem(topicPrompts);
 
-    console.log(topic.topic);
+    const generatedContent = await this.openAiService.generateResponse(topic);
 
-    const tweetContent = await this.openAiService.generateResponse(topic);
+    console.log(generatedContent.length);
+    console.log(generatedContent);
 
-    console.log(tweetContent);
+    if (
+      !this.envConfigService.getBoolean('USER_ON_TWITTER_PREMIUM') &&
+      generatedContent.length > 275
+    ) {
+      console.log("Content Text Longer Than User's Limit");
+      return;
+    }
 
     const tweetResponse = await this.twitterApiService.createTweet({
-      text: tweetContent,
+      text: generatedContent,
     });
     console.log(tweetResponse);
 
