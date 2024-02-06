@@ -3,6 +3,8 @@
 AI-Twitter-X-Bot is a highly adaptable Twitter bot designed to post dynamic content tailored to your preferences. Leveraging advanced OpenAi, 
 it delivers a diverse range of content randomly generated based on the user topics and prompts
 
+Follow AI-Twitter-X-Bot Sample Usage on Twitter: [@backend_by_tony](https://twitter.com/backend_by_tony)
+
 ## Features
 
 - Utilizes cutting-edge AI technology to curate content based on user preferences.
@@ -46,5 +48,3 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 
 If you have any questions, suggestions, or feedback, feel free to reach out to me at [anthony@nwobodo.me].
-
-Follow AI-Twitter-X-Bot on Twitter: [@backend_by_tony](https://twitter.com/backend_by_tony)
