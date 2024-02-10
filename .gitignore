@@ -3,7 +3,7 @@
 /node_modules
 
 .env
-
+codeSnapshot.png
 # Logs
 logs
 *.log

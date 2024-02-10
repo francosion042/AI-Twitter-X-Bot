@@ -68,5 +68,9 @@ export class TwitterApiService {
     }
   }
 
+  async uploadMedia(file) {
+    return await this.twitterClient.v1.uploadMedia(file);
+  }
+
   async deleteTweet() {}
 }

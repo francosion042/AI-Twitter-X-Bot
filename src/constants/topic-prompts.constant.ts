@@ -1,6 +1,6 @@
 import { TopicPromptType } from '../commons/types';
 
-const topicPrompts: TopicPromptType[] = [
+export const textOnlyTopicPrompts: TopicPromptType[] = [
   {
     topic: 'Backend Engineering',
     userProfession: 'Backend Engineer',
@@ -26,4 +26,22 @@ const topicPrompts: TopicPromptType[] = [
   },
 ];
 
-export default topicPrompts;
+export const textAndSnippetTopicPrompts: TopicPromptType[] = [
+  {
+    topic: 'Data Structures',
+    userProfession: 'Backend Engineer',
+    prompt:
+      "Craft a short tweet about Data Structures. generate an advanced typescript code snippet . Don't use emojis and hashtags.",
+  },
+  {
+    topic: 'Algorithms',
+    userProfession: 'Backend Engineer',
+    prompt:
+      "Craft a short tweet about Algorithms. generate an advanced typescript code snippet to show. Don't use emojis and hashtags.",
+  },
+  {
+    topic: 'API Security',
+    userProfession: 'NodeJs Backend Engineer',
+    prompt: `Craft a short tweet about API Security. Share a typescript code snippet. Don't use emojis and hashtags.`,
+  },
+];
